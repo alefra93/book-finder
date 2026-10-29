@@ -2,6 +2,9 @@
 
 A responsive single-page app that searches the [Google Books API](https://developers.google.com/books/docs/v1/reference/volumes/list), with live search, server-side pagination and a detail page for each book.
 
+- **Repository:** https://github.com/alefra93/book-finder
+- **Live demo (CodeSandbox):** _coming soon_
+
 ## Stack
 
 - **React 18 + TypeScript**, bundled with **Vite**
@@ -12,7 +15,7 @@ A responsive single-page app that searches the [Google Books API](https://develo
 
 ## Getting started
 
-Requires Node.js 18 or later. The archive includes the git history (`git log` shows how the app was built).
+Requires Node.js 18 or later.
 
 ```bash
 npm install
