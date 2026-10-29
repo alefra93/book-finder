@@ -1,0 +1,78 @@
+@import 'variables';
+@import 'bootstrap/scss/bootstrap';
+
+.brand-mark {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: $border-radius-sm;
+  background: $brand;
+}
+
+// Truncates the text to two lines and adds "…".
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.book-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background-color: $gray-200;
+}
+
+.book-list-item {
+  transition:
+    box-shadow 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: $box-shadow-sm;
+    transform: translateY(-1px);
+  }
+
+  &__cover {
+    flex: 0 0 4.5rem;
+    width: 4.5rem;
+    border-radius: $border-radius-sm;
+
+    @include media-breakpoint-up(md) {
+      flex-basis: 5.5rem;
+      width: 5.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover,
+    &:focus-within {
+      transform: none;
+    }
+  }
+}
+
+.results {
+  transition: opacity 0.15s ease-in-out;
+
+  &--stale {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.book-description {
+  max-width: 70ch;
+  line-height: 1.7;
+}
