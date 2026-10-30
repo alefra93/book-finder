@@ -3,6 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    // CodeSandbox serves the dev server preview from *.csb.app.
+    allowedHosts: ['.csb.app'],
+  },
   css: {
     preprocessorOptions: {
       scss: {
