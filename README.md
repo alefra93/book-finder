@@ -3,7 +3,8 @@
 A responsive single-page app that searches the [Google Books API](https://developers.google.com/books/docs/v1/reference/volumes/list), with live search, server-side pagination and a detail page for each book.
 
 - **Repository:** https://github.com/alefra93/book-finder
-- **Live demo (CodeSandbox):** _coming soon_
+- **CodeSandbox (code + preview):** https://codesandbox.io/p/devbox/rglg2x
+- **Live demo:** https://rglg2x-5173.csb.app (the Devbox may take a few seconds to wake up)
 
 ## Stack
 
