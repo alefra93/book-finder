@@ -1,10 +1,12 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   server: {
-    // CodeSandbox serves the dev server preview from *.csb.app.
+    // Listen on all interfaces and accept the *.csb.app preview host, so the
+    // dev server also works inside a CodeSandbox Devbox container.
+    host: true,
     allowedHosts: ['.csb.app'],
   },
   css: {
@@ -16,11 +18,5 @@ export default defineConfig({
         silenceDeprecations: ['import', 'global-builtin', 'color-functions'],
       },
     },
-  },
-  test: {
-    environment: 'jsdom',
-    globals: true,
-    setupFiles: './src/test/setup.ts',
-    css: false,
   },
 });
